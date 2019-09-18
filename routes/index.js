@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-var nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
+// const templateExample = require('../templates/template')
+
 /* GET home page */
 router.get('/', (req, res, next) => {
     res.render('index');
@@ -29,7 +31,7 @@ router.post('/send-email', (req, res, next) => {
             to: email,
             subject: subject,
             text: message,
-            html: `<b>${message}</b>`
+            html: `<b>${message}</b>`,
         })
         .then(info => res.render('message', { email, subject, message, info }))
         .catch(error => console.log(error));

@@ -336,4 +336,5 @@ module.exports = {
     </div>
   
     </body>
-  </html>` }
+  </html>
+ ${message} VARIABLE WHERE YOU WANT` }
